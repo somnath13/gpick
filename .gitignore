@@ -20,3 +20,6 @@ installer/files/*
 user-config.py
 build
 tags
+
+ls-R
+cmakebuild/

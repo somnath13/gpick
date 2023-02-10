@@ -315,7 +315,7 @@ struct BackgroundColorPicker: public IEventHandler {
 		return false;
 	}
 	static gboolean onConfigureEvent(GtkWidget *, GdkEventConfigure *, BackgroundColorPicker *backgroundColorPicker) {
-		g_timeout_add(10, G_SOURCE_FUNC(onSizeUpdateTimeout), backgroundColorPicker);
+		g_timeout_add(10, (GSourceFunc)(onSizeUpdateTimeout), backgroundColorPicker);
 		return false;
 	}
 	static gboolean onWindowStateEvent(GtkWidget *, GdkEventWindowState *event, BackgroundColorPicker *backgroundColorPicker) {
